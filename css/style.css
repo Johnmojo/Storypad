@@ -1,0 +1,246 @@
+:root {
+  --main-bg-color: #171717;
+  --main-bg-red: #fedcda;
+  --main-bg-yellow: #fdd100;
+  --main-text-color-red: #370e0c;
+  --main-text-color-bright: #fcfcfc;
+  --main-text-color-dark: #6f6f6f;
+}
+
+body {
+  background: #171717;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.signup__parent__header > a {
+  color: var(--main-text-color-dark);
+  text-decoration: none;
+  margin-right: 1em;
+}
+
+.index__parent {
+  max-width: 420px;
+  margin: 10rem auto 0 auto;
+}
+
+.index__parent > h1 {
+  font-weight: 600;
+  color: var(--main-text-color-bright);
+}
+
+.index__parent > h2 {
+  font-weight: 500;
+  color: var(--main-text-color-bright);
+}
+.index__parent__action {
+  margin: 3em 0;
+}
+
+.index__parent__action > a {
+  height: 100px;
+  width: 50px;
+  padding: 0.75em;
+  margin: 0 0.75em 0 0;
+  border-radius: 5px;
+  background: var(--main-text-color-bright);
+  color: var(--main-bg-color);
+  text-decoration: none;
+}
+
+.signup__parent {
+  max-width: 420px;
+  margin: 10rem auto 0 auto;
+}
+
+.signup__parent > h1 {
+  font-weight: 600;
+  color: var(--main-text-color-bright);
+}
+
+.signup__parent > h2 {
+  font-weight: 500;
+  color: var(--main-text-color-bright);
+}
+
+.signup_parent__action__form {
+  margin: 2em 0;
+}
+
+.signup_parent__action__form > label,
+input {
+  display: block;
+}
+
+.signup_parent__action__form > label {
+  color: var(--main-text-color-bright);
+  margin: 0.5em 0;
+  font-weight: 600;
+}
+
+.signup_parent__action__form > input[type="text" i] {
+  border-radius: 5px;
+  height: 2.5em;
+  width: 100%;
+  border-style: none;
+  margin-bottom: 2em;
+}
+
+.signup_parent__action__form > input[type="submit" i] {
+  height: 3.5em;
+  padding: 0.75em 2em;
+  margin: 0 0.75em 0 0;
+  font-weight: 600;
+  border-radius: 5px;
+  border-style: none;
+  background: var(--main-text-color-bright);
+  color: var(--main-bg-color);
+  text-decoration: none;
+  margin: 1em 0;
+}
+
+.login__parent__header > a {
+  color: var(--main-text-color-dark);
+  text-decoration: none;
+  margin-right: 1em;
+}
+
+.login__parent {
+  max-width: 420px;
+  margin: 10rem auto 0 auto;
+}
+
+.login__parent > h1 {
+  font-weight: 600;
+  color: var(--main-text-color-bright);
+}
+
+.login__parent > h2 {
+  font-weight: 500;
+  color: var(--main-text-color-bright);
+}
+
+.login_parent__action__form {
+  margin: 2em 0;
+}
+
+.login_parent__action__form > label,
+input {
+  display: block;
+}
+
+.login_parent__action__form > label {
+  color: var(--main-text-color-bright);
+  margin: 0.5em 0;
+  font-weight: 600;
+}
+
+.login_parent__action__form > input[type="text" i] {
+  border-radius: 5px;
+  height: 2.5em;
+  width: 100%;
+  border-style: none;
+  margin-bottom: 2em;
+}
+
+.login_parent__action__form > input[type="submit" i] {
+  height: 3.5em;
+  padding: 0.75em 2em;
+  margin: 0 0.75em 0 0;
+  font-weight: 600;
+  border-radius: 5px;
+  border-style: none;
+  background: var(--main-text-color-bright);
+  color: var(--main-bg-color);
+  text-decoration: none;
+  margin: 1em 0;
+}
+
+.login__parent__action__error {
+  background-color: var(--main-bg-red);
+  color: var(--main-text-color-red);
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.dashboard__parent {
+  max-width: 420px;
+  margin: 10rem auto 0 auto;
+}
+
+.dashboard__parent > h1 {
+  font-weight: 600;
+  color: var(--main-text-color-bright);
+}
+
+.dashboard__parent__header > a {
+  color: var(--main-text-color-dark);
+  text-decoration: none;
+  margin-right: 1em;
+}
+
+.dashboard__parent__action__empty {
+  color: var(--main-text-color-bright);
+  padding: 1em 0;
+}
+
+.dashboard__parent__journal > .dashboard__parent__action__error {
+  color: var(--main-text-color-bright);
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.dashboard__parent__action__form {
+  margin-top: 1em;
+}
+
+.dashboard__parent__action__form > textarea {
+  border-radius: 5px;
+  min-height: 108px;
+  width: 100%;
+  border: 1px solid transparent;
+  resize: vertical;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 2em;
+  border-radius: 5px;
+  outline: none;
+  background-color: #f3f4f4;
+}
+
+.dashboard__parent__action__form > input {
+  height: 3.5em;
+  padding: 0.75em 2em;
+  margin: 0 0.75em 0 0;
+  font-weight: 600;
+  border-radius: 5px;
+  border-style: none;
+  background: var(--main-text-color-bright);
+  color: var(--main-bg-color);
+  text-decoration: none;
+  margin: 1em 0;
+}
+
+.dashboard__parent__action__empty {
+  padding: 1em;
+  margin: 2em 0;
+}
+
+.dashboard__parent__action__content {
+  background: var(--main-text-color-dark);
+  color: var(--main-text-color-bright);
+  width: 100%;
+  height: 40px;
+  min-height: 108px;
+  border: 1px solid transparent;
+  resize: vertical;
+  margin-bottom: 2em;
+  border-radius: 5px;
+  outline: none;
+}
+
+
+.dashboard__parent__journal__card__action > a {
+  color: var(--main-text-color-bright);
+  text-decoration: none;
+  margin-right: 1em;
+}
