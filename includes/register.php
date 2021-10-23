@@ -28,7 +28,7 @@ if (isset($_SESSION['usersUid'])) {
             <a href="./login.php">Log in</a>
         </div>
         <h1>Sign Up</h1>
-        <h2>Enter your desired username & password.</h2>
+        <h2>It's quick and easy.</h2>
         <div class="signup__parent__action">
             <form class="signup_parent__action__form" action="./registered.php" method="POST">
                 <label>Username</label>

@@ -1,19 +1,20 @@
 :root {
-  --main-bg-color: #171717;
-  --main-bg-red: #fedcda;
-  --main-bg-yellow: #fdd100;
-  --main-text-color-red: #370e0c;
-  --main-text-color-bright: #fcfcfc;
-  --main-text-color-dark: #6f6f6f;
+  --main-black-color: #2a2a2a;
+  --main-red-color: #fedcda;
+  --main-yellow-color: #fdd100;
+  --main-redder-color: #370e0c;
+  --main-bright-color: #fbfbfb;
+  --main-white-color: #ffffff;
+  --main-dark-color: #6f6f6f;
 }
 
 body {
-  background: #171717;
+  background: var(--main-white-color);
   font-family: Helvetica, Arial, sans-serif;
 }
 
 .signup__parent__header > a {
-  color: var(--main-text-color-dark);
+  color: var(--main-dark-color);
   text-decoration: none;
   margin-right: 1em;
 }
@@ -25,26 +26,26 @@ body {
 
 .index__parent > h1 {
   font-weight: 600;
-  color: var(--main-text-color-bright);
+  color: var(--main-black-color);
 }
 
 .index__parent > h2 {
   font-weight: 500;
-  color: var(--main-text-color-bright);
+  color: var(--main-dark-color);
 }
 .index__parent__action {
   margin: 3em 0;
 }
 
 .index__parent__action > a {
-  height: 100px;
-  width: 50px;
-  padding: 0.75em;
-  margin: 0 0.75em 0 0;
-  border-radius: 5px;
-  background: var(--main-text-color-bright);
-  color: var(--main-bg-color);
+  color: var(--main-bright-color);
+  background-color: var(--main-black-color);
+  padding: 12px 22px;
   text-decoration: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  margin-right: 10px;
 }
 
 .signup__parent {
@@ -54,12 +55,12 @@ body {
 
 .signup__parent > h1 {
   font-weight: 600;
-  color: var(--main-text-color-bright);
+  color: var(--main-black-color);
 }
 
 .signup__parent > h2 {
   font-weight: 500;
-  color: var(--main-text-color-bright);
+  color: var(--main-dark-color);
 }
 
 .signup_parent__action__form {
@@ -72,34 +73,33 @@ input {
 }
 
 .signup_parent__action__form > label {
-  color: var(--main-text-color-bright);
+  color: var(--main-dark-color);
   margin: 0.5em 0;
   font-weight: 600;
 }
 
-.signup_parent__action__form > input[type="text" i] {
+.signup_parent__action__form > input[type="text"] {
   border-radius: 5px;
-  height: 2.5em;
+  color: var(--main-dark-color);
+  height: 3em;
   width: 100%;
-  border-style: none;
+  border: 1.5px solid #d4d4d4;
   margin-bottom: 2em;
+  padding-left: 1em;
 }
 
-.signup_parent__action__form > input[type="submit" i] {
-  height: 3.5em;
-  padding: 0.75em 2em;
-  margin: 0 0.75em 0 0;
-  font-weight: 600;
-  border-radius: 5px;
-  border-style: none;
-  background: var(--main-text-color-bright);
-  color: var(--main-bg-color);
+.signup_parent__action__form > input[type="submit"] {
+  color: var(--main-bright-color);
+  background-color: var(--main-black-color);
+  padding: 12px 35px;
   text-decoration: none;
-  margin: 1em 0;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
 }
 
 .login__parent__header > a {
-  color: var(--main-text-color-dark);
+  color: var(--main-dark-color);
   text-decoration: none;
   margin-right: 1em;
 }
@@ -111,12 +111,12 @@ input {
 
 .login__parent > h1 {
   font-weight: 600;
-  color: var(--main-text-color-bright);
+  color: var(--main-black-color);
 }
 
 .login__parent > h2 {
   font-weight: 500;
-  color: var(--main-text-color-bright);
+  color: var(--main-bright-color);
 }
 
 .login_parent__action__form {
@@ -129,118 +129,156 @@ input {
 }
 
 .login_parent__action__form > label {
-  color: var(--main-text-color-bright);
+  color: var(--main-dark-color);
   margin: 0.5em 0;
   font-weight: 600;
 }
 
-.login_parent__action__form > input[type="text" i] {
+.login_parent__action__form > input[type="text"] {
   border-radius: 5px;
-  height: 2.5em;
+  color: var(--main-dark-color);
+  height: 3em;
   width: 100%;
-  border-style: none;
+  border: 1.5px solid #d4d4d4;
   margin-bottom: 2em;
+  padding-left: 1em;
 }
 
-.login_parent__action__form > input[type="submit" i] {
-  height: 3.5em;
-  padding: 0.75em 2em;
-  margin: 0 0.75em 0 0;
-  font-weight: 600;
-  border-radius: 5px;
-  border-style: none;
-  background: var(--main-text-color-bright);
-  color: var(--main-bg-color);
+.login_parent__action__form > input[type="submit"] {
+  color: var(--main-bright-color);
+  background-color: var(--main-black-color);
+  padding: 12px 35px;
   text-decoration: none;
-  margin: 1em 0;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
 }
 
 .login__parent__action__error {
-  background-color: var(--main-bg-red);
-  color: var(--main-text-color-red);
+  background-color: var(--main-red-color);
+  color: var(--main-redder-color);
   padding: 1em;
   border-radius: 5px;
 }
 
 .dashboard__parent {
   max-width: 420px;
-  margin: 10rem auto 0 auto;
+  margin: 10rem auto 10rem auto;
 }
 
 .dashboard__parent > h1 {
   font-weight: 600;
-  color: var(--main-text-color-bright);
+  color: var(--main-black-color);
 }
 
 .dashboard__parent__header > a {
-  color: var(--main-text-color-dark);
+  color: var(--main-dark-color);
   text-decoration: none;
   margin-right: 1em;
 }
 
 .dashboard__parent__action__empty {
-  color: var(--main-text-color-bright);
-  padding: 1em 0;
+  margin: 2em;
+  font-weight: 600;
+  color: var(--main-dark-color);
+  opacity: 0.6;
+}
+
+.dashboard__parent__journal > form {
+  position: relative;
 }
 
 .dashboard__parent__journal > .dashboard__parent__action__error {
-  color: var(--main-text-color-bright);
+  color: var(--main-bright-color);
   padding: 1em;
   border-radius: 5px;
 }
 
 .dashboard__parent__action__form {
   margin-top: 1em;
+  position: relative;
 }
 
 .dashboard__parent__action__form > textarea {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1rem;
   border-radius: 5px;
   min-height: 108px;
   width: 100%;
-  border: 1px solid transparent;
+  border: 1.5px solid #f3f4f4;
   resize: vertical;
   width: 100%;
-  height: 40px;
+  min-height: 200px;
   margin-bottom: 2em;
   border-radius: 5px;
   outline: none;
-  background-color: #f3f4f4;
+  /* background-color: #f3f4f4; */
+  padding: 1em;
+  font-weight: 600;
 }
 
 .dashboard__parent__action__form > input {
-  height: 3.5em;
-  padding: 0.75em 2em;
-  margin: 0 0.75em 0 0;
-  font-weight: 600;
-  border-radius: 5px;
-  border-style: none;
-  background: var(--main-text-color-bright);
-  color: var(--main-bg-color);
+  color: var(--main-bright-color);
+  background-color: var(--main-black-color);
+  padding: 12px 35px;
   text-decoration: none;
-  margin: 1em 0;
-}
-
-.dashboard__parent__action__empty {
-  padding: 1em;
-  margin: 2em 0;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  position: absolute;
+  bottom: 50px;
+  right: 30px;
 }
 
 .dashboard__parent__action__content {
-  background: var(--main-text-color-dark);
-  color: var(--main-text-color-bright);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  background: var(--main-bright-color);
+  color: var(--main-black-color);
   width: 100%;
   height: 40px;
-  min-height: 108px;
+  min-height: 200px;
   border: 1px solid transparent;
   resize: vertical;
   margin-bottom: 2em;
   border-radius: 5px;
   outline: none;
+  padding: 1em;
+  font-weight: 600;
 }
 
+.dashboard__parent__journal__card__action {
+  display: flex;
+  column-gap: 0.5em;
+  margin: 1em 0;
+  position: absolute;
+  bottom: 30px;
+  left: 15px;
+}
 
-.dashboard__parent__journal__card__action > a {
-  color: var(--main-text-color-bright);
+.dashboard__parent__journal__card__action__delete {
+  font-family: Helvetica, Arial, sans-serif;
+  color: var(--main-black-color);
+  background-color: var(--main-bright-color);
+  height: 25px;
+  width: 25px;
+  padding: 6px;
   text-decoration: none;
-  margin-right: 1em;
+  border: 1.5px solid #000000;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard__parent__journal__card__action__update {
+  font-family: Helvetica, Arial, sans-serif;
+  color: var(--main-black-color);
+  background-color: var(--main-bright-color);
+  padding: 6px 12px;
+  text-decoration: none;
+  border: 1.5px solid #000000;
+  cursor: pointer;
+  border-radius: 25px;
 }

@@ -1,3 +1,4 @@
+<script src="https://kit.fontawesome.com/29e756bbd4.js" crossorigin="anonymous"></script>
 <?php
 
 $servername = 'localhost';
