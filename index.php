@@ -17,12 +17,15 @@ if (isset($_SESSION['usersUid'])) {
     <meta name="viewport" content="width=`device-width`, initial-scale=1.0">
     <title>Quick Note</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/29e756bbd4.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="index__parent">
-        <h1>Quick Note</h1>
+        <img src="img/icon.png" alt="Icon">
         <h2>A quick note-taking platform for people who writes.</h2>
+        <h3><i class="far fa-check-circle"></i> Simple</h3>
+        <h3><i class="far fa-check-circle"></i> Open-source</h3>
         <div class="index__parent__action">
             <a href="includes/register.php">Sign Up</a>
             <a href="includes/login.php">Log in</a>

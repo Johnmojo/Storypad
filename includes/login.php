@@ -50,9 +50,9 @@ if (isset($_POST['submitLogIn'])) {
         <div class="login__parent__action">
             <form class="login_parent__action__form" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
                 <label>Username</label>
-                <input type="text" name="usersUid">
+                <input type="text" name="usersUid" minlength="8" required>
                 <label>Password</label>
-                <input type="text" name="usersPwd">
+                <input type="text" name="usersPwd" minlength="8" required>
                 <input type="submit" name="submitLogIn" value="Log In">
             </form>
             <?php

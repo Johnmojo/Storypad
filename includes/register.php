@@ -32,9 +32,9 @@ if (isset($_SESSION['usersUid'])) {
         <div class="signup__parent__action">
             <form class="signup_parent__action__form" action="./registered.php" method="POST">
                 <label>Username</label>
-                <input type="text" name="usersUid">
+                <input type="text" name="usersUid" minlength="8" required>
                 <label>Password</label>
-                <input type="text" name="usersPwd">
+                <input type="text" name="usersPwd" minlength="8" required>
                 <input type="submit" name="submitSignUp" value="Sign Up">
             </form>
 

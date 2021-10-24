@@ -31,8 +31,14 @@ body {
 
 .index__parent > h2 {
   font-weight: 500;
+  color: var(--main-black-color);
+}
+
+.index__parent > h3 {
+  font-weight: 500;
   color: var(--main-dark-color);
 }
+
 .index__parent__action {
   margin: 3em 0;
 }
@@ -46,6 +52,11 @@ body {
   cursor: pointer;
   border-radius: 25px;
   margin-right: 10px;
+}
+
+.index__parent img {
+  max-width: 100px;
+  height: auto;
 }
 
 .signup__parent {

@@ -10,17 +10,30 @@ if (isset($_POST['submitSignUp'])) {
     //String for user & table
     $usersUidTable = 'users_' . $usersUid;
 
+    // Gather userID pool
+    $stmt0 = $pdo->prepare("SELECT * FROM users WHERE usersUid =?");
+    $stmt0->execute([$_POST['usersUid']]);
+    $user = $stmt0->fetch();
+
+    if ($user) {
+        echo "Match, fail to register";
+        $lol = true;
+    } else {
     //Hash the password
     $hashed_usersPwd = password_hash($_POST['usersPwd'], PASSWORD_DEFAULT);
 
     //Prepare username & password
     $stmt1 = $pdo->prepare("INSERT INTO users (usersUid,hashed_usersPwd) VALUES (?,?); CREATE TABLE $usersUidTable (idContent INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT, usersContent varchar(255) NOT NULL);");
 
-    //Insertion
-    $stmt1->execute([$usersUid, $hashed_usersPwd]);
-}
+    echo "No match, registered.";
+    //header("Location: ./registered.php");
 
-?>
+    //Insertion
+    //$stmt1->execute([$usersUid, $hashed_usersPwd]);
+    }
+
+
+}
 
 ?>
 
