@@ -5,6 +5,7 @@ include('../includes/dbh.php');
 
 session_start();
 
+//Check session
 if (isset($_SESSION['usersUid'])) {
     header("Location: ./dashboard.php");
 }

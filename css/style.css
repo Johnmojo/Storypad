@@ -75,7 +75,7 @@ body {
 }
 
 .signup_parent__action__form {
-  margin: 2em 0;
+  margin: 1.5em 0;
 }
 
 .signup_parent__action__form > label,
@@ -292,4 +292,11 @@ input {
   border: 1.5px solid #000000;
   cursor: pointer;
   border-radius: 25px;
+}
+
+.register__parent__action__error {
+  background-color: var(--main-red-color);
+  color: var(--main-redder-color);
+  padding: 1em;
+  border-radius: 5px;
 }
