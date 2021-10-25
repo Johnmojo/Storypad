@@ -68,14 +68,13 @@ if (isset($_GET['delete'])) {
                 echo "<h2 class='dashboard__parent__action__empty'>Note you add appear here</h2>";
             } else {
                 foreach ($queryUsersContents as $queryUsersContent) {
-                    echo "<form method='POST' action='dashboard.php' class='dashboard__parent__journal__card'>" . "<div class='dashboard__parent__journal__card__action'><a class='dashboard__parent__journal__card__action__delete'  href=" . $_SERVER['PHP_SELF'] . "?delete=" . $queryUsersContent['idContent'] . "><i class='far fa-trash-alt'></i></a>" . "<input type='hidden' value=" . $queryUsersContent['idContent'] . " name='idContentUpdate'>" . "<input class='dashboard__parent__journal__card__action__update' name='submitContentUpdate' type='submit' value='Update'></div>" . "<textarea name='usersContentUpdate' class='dashboard__parent__action__content'>" . $queryUsersContent['usersContent'] . "</textarea>" . "</form>";
+                    echo "<form id='clickContentBox' method='POST' action='dashboard.php' class='dashboard__parent__journal__card'>" . "<div id='clickContentAction' class='dashboard__parent__journal__card__action' style='opacity:0.25; transition:0.5s;'><a class='dashboard__parent__journal__card__action__delete'  href=" . $_SERVER['PHP_SELF'] . "?delete=" . $queryUsersContent['idContent'] . "><i class='far fa-trash-alt'></i></a>" . "<input type='hidden' value=" . $queryUsersContent['idContent'] . " name='idContentUpdate'>" . "<input class='dashboard__parent__journal__card__action__update' name='submitContentUpdate' type='submit' value='Update'></div>" . "<textarea required id='clickContentTextarea' name='usersContentUpdate' class='dashboard__parent__action__content'>" . $queryUsersContent['usersContent'] . "</textarea>" . "</form>";
                 }
             }
 
             ?>
         </div>
     </div>
-
 </body>
 
 </html>

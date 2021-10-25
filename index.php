@@ -23,9 +23,9 @@ if (isset($_SESSION['usersUid'])) {
 <body>
     <div class="index__parent">
         <img src="img/icon.png" alt="Icon">
-        <h2>A quick note-taking platform for people who writes.</h2>
+        <h2>A tiny platform to write & manage your epic stories.</h2>
         <h3><i class="far fa-check-circle"></i> Simple</h3>
-        <h3><i class="far fa-check-circle"></i> Open-source</h3>
+        <h3><i class="far fa-check-circle"></i> No email required</h3>
         <div class="index__parent__action">
             <a href="includes/register.php">Sign Up</a>
             <a href="includes/login.php">Log in</a>

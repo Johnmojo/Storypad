@@ -1,4 +1,9 @@
 <script src="https://kit.fontawesome.com/29e756bbd4.js" crossorigin="anonymous"></script>
+<script>
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+</script>
 <?php
 
 $servername = 'localhost';
