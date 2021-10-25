@@ -50,7 +50,7 @@ if (isset($_POST['submitSignUp'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=`device-width`, initial-scale=1.0">
-    <title>Quick Note | Sign Up</title>
+    <title>Sign Up | StoryPad</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -65,7 +65,7 @@ if (isset($_POST['submitSignUp'])) {
         <div class="signup__parent__action">
             <?php
             if ($errorRegister) {
-                echo "<div class='register__parent__action__error'>User name taken. Perhaps try another name?</div>";
+                echo "<div class='register__parent__action__error'>User name taken. Try another user name.</div>";
             }
             ?>
             <form class="signup_parent__action__form" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">

@@ -15,8 +15,9 @@ if (isset($_SESSION['usersUid'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=`device-width`, initial-scale=1.0">
-    <title>Quick Note</title>
+    <title>StoryPad</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon.ico">
     <script src="https://kit.fontawesome.com/29e756bbd4.js" crossorigin="anonymous"></script>
 </head>
 

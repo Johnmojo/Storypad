@@ -42,8 +42,11 @@ if (isset($_GET['delete'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=`device-width`, initial-scale=1.0">
-    <title>Dashboard | Dashboard</title>
+    <title>Dashboard | StoryPad</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -68,7 +71,7 @@ if (isset($_GET['delete'])) {
                 echo "<h2 class='dashboard__parent__action__empty'>Note you add appear here</h2>";
             } else {
                 foreach ($queryUsersContents as $queryUsersContent) {
-                    echo "<form id='clickContentBox' method='POST' action='dashboard.php' class='dashboard__parent__journal__card'>" . "<div id='clickContentAction' class='dashboard__parent__journal__card__action' style='opacity:0.25; transition:0.5s;'><a class='dashboard__parent__journal__card__action__delete'  href=" . $_SERVER['PHP_SELF'] . "?delete=" . $queryUsersContent['idContent'] . "><i class='far fa-trash-alt'></i></a>" . "<input type='hidden' value=" . $queryUsersContent['idContent'] . " name='idContentUpdate'>" . "<input class='dashboard__parent__journal__card__action__update' name='submitContentUpdate' type='submit' value='Update'></div>" . "<textarea required id='clickContentTextarea' name='usersContentUpdate' class='dashboard__parent__action__content'>" . $queryUsersContent['usersContent'] . "</textarea>" . "</form>";
+                    echo "<form id='clickContentBox' method='POST' action='dashboard.php' class='dashboard__parent__journal__card'>" . "<div id='clickContentAction' class='dashboard__parent__journal__card__action'><a class='dashboard__parent__journal__card__action__delete'  href=" . $_SERVER['PHP_SELF'] . "?delete=" . $queryUsersContent['idContent'] . "><i class='far fa-trash-alt'></i></a>" . "<input type='hidden' value=" . $queryUsersContent['idContent'] . " name='idContentUpdate'>" . "<input class='dashboard__parent__journal__card__action__update' name='submitContentUpdate' type='submit' value='Update'></div>" . "<textarea required id='clickContentTextarea' name='usersContentUpdate' class='dashboard__parent__action__content'>" . $queryUsersContent['usersContent'] . "</textarea>" . "</form>";
                 }
             }
 
