@@ -11,7 +11,7 @@
 $servername = 'localhost';
 $username = 'admin';
 $password = 'admin';
-$dbname = "quicknotedb";
+$dbname = "storypaddb";
 $charset = 'utf8mb4';
 
 //Connect to database
