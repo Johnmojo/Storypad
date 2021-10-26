@@ -9,9 +9,9 @@
 <?php
 //Credential for database
 $servername = 'localhost';
-$username = 'john';
-$password = 'john';
-$dbname = "quicknotedb";
+$username = 'admintest';
+$password = 'admintest';
+$dbname = "storypadDB";
 $charset = 'utf8mb4';
 
 //Connect to database
