@@ -1,7 +1,9 @@
 <?php
 
+//Start session
 session_start();
 
+//If in session, redirect to dashboard.php
 if (isset($_SESSION['usersUid'])) {
     header("Location: ./includes/dashboard.php");
 }

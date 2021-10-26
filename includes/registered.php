@@ -1,3 +1,4 @@
+<!--After user registered, redirect to this page-->
 <!DOCTYPE html>
 <html lang="en">
 

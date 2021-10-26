@@ -1,10 +1,13 @@
+<!--Register area, once done redirect to registered.php-->
 <?php
 
 //Include db handler
 include('../includes/dbh.php');
 
+//Start the session
 session_start();
 
+//If session exist and matched, redirect to dashboard.php
 if (isset($_SESSION['usersUid'])) {
     header("Location: ./dashboard.php");
 }
@@ -12,14 +15,15 @@ if (isset($_SESSION['usersUid'])) {
 //Error indicator
 $errorRegister = false;
 
+//Check if POST return something
 if (isset($_POST['submitSignUp'])) {
     //Get user id field
     $usersUid = $_POST['usersUid'];
 
-    //String for user & table
+    //String for user & table combined
     $usersUidTable = 'users_' . $usersUid;
 
-    // Gather userID pool
+    // Prepare query & Gather userID pool
     $stmt0 = $pdo->prepare("SELECT * FROM users WHERE usersUid =?");
     $stmt0->execute([$_POST['usersUid']]);
     $user = $stmt0->fetch();
@@ -31,7 +35,7 @@ if (isset($_POST['submitSignUp'])) {
         //Proceed with registration, hash the password
         $hashed_usersPwd = password_hash($_POST['usersPwd'], PASSWORD_DEFAULT);
 
-        //Prepare username & password
+        //Prepare username & password, create "table + username" in the database
         $stmt1 = $pdo->prepare("INSERT INTO users (usersUid,hashed_usersPwd) VALUES (?,?); CREATE TABLE $usersUidTable (idContent INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT, usersContent varchar(255) NOT NULL);");
 
         //Insertion
@@ -72,7 +76,7 @@ if (isset($_POST['submitSignUp'])) {
                 <label>Username</label>
                 <input type="text" name="usersUid" minlength="8" required>
                 <label>Password</label>
-                <input type="text" name="usersPwd" minlength="8" required>
+                <input type="password" name="usersPwd" minlength="8" required>
                 <input type="submit" name="submitSignUp" value="Sign Up">
             </form>
         </div>

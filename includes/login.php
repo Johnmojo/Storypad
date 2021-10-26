@@ -1,11 +1,13 @@
+<!--Login area, redirect to dashboard.php once done-->
 <?php
 
 //Include db handler
 include('../includes/dbh.php');
 
+//Start the session
 session_start();
 
-//Check session
+//If session exist and matched, redirect to dashboard.php
 if (isset($_SESSION['usersUid'])) {
     header("Location: ./dashboard.php");
 }
@@ -13,18 +15,24 @@ if (isset($_SESSION['usersUid'])) {
 //Error indicator
 $indicateError = false;
 
+//Check if POST return something
 if (isset($_POST['submitLogIn'])) {
-    //Establish PDO
+    //Prepare query
     $stmt = $pdo->prepare("SELECT * FROM users WHERE usersUid=?");
     $stmt->execute([$_POST['usersUid']]);
     $user = $stmt->fetch();
 
+    //Check if POST return something
     if ($user && password_verify($_POST['usersPwd'], $user['hashed_usersPwd'])) {
+        //Start the session
         session_start();
+        //Asign session following user id
         $_SESSION['usersUid'] = $user['usersUid'];
+        //Redirect to dashboard.php
         header("Location: ./dashboard.php");
         exit;
     } else {
+        //If register fail, show error
         $indicateError = true;
     }
 }
@@ -53,7 +61,7 @@ if (isset($_POST['submitLogIn'])) {
                 <label>Username</label>
                 <input type="text" name="usersUid" minlength="8" required>
                 <label>Password</label>
-                <input type="text" name="usersPwd" minlength="8" required>
+                <input type="password" name="usersPwd" minlength="8" required>
                 <input type="submit" name="submitLogIn" value="Log In">
             </form>
             <?php

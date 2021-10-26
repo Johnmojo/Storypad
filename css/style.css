@@ -99,6 +99,16 @@ input {
   padding-left: 1em;
 }
 
+.signup_parent__action__form > input[type="password"] {
+  border-radius: 5px;
+  color: var(--main-dark-color);
+  height: 3em;
+  width: 100%;
+  border: 1.5px solid #d4d4d4;
+  margin-bottom: 2em;
+  padding-left: 1em;
+}
+
 .signup_parent__action__form > input[type="submit"] {
   color: var(--main-bright-color);
   background-color: var(--main-black-color);
@@ -145,7 +155,7 @@ input {
   font-weight: 600;
 }
 
-.login_parent__action__form > input[type="text"] {
+.login_parent__action__form > input {
   border-radius: 5px;
   color: var(--main-dark-color);
   height: 3em;
@@ -211,7 +221,7 @@ input {
 }
 
 .dashboard__parent__action__form > textarea {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   font-size: 1rem;
   border-radius: 5px;
   min-height: 108px;
@@ -242,7 +252,7 @@ input {
 }
 
 .dashboard__parent__action__content {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   font-size: 1rem;
   background: var(--main-bright-color);
   color: var(--main-black-color);

@@ -1,35 +1,44 @@
+<!--Dashboard area, user can log out once done-->
 <?php
 
 //Include db handler
 include('../includes/dbh.php');
 
+//Start the session
 session_start();
 
-//Check session
+//If NOT in session, redirect to login.php
 if (!isset($_SESSION['usersUid'])) {
     header("Location: ./login.php");
 }
 
-//Current session
+//Get current session
 $usersUidSession = $_SESSION['usersUid'];
 
-//String for user & table
+//String for user & table combined
 $usersUidTable = 'users_' . $usersUidSession;
 
-$yay = "false";
-
+//Check if POST return something
 if (isset($_POST['submitContent'])) {
+    //Prepare query for content submission
     $stmt1 = $pdo->prepare("INSERT INTO $usersUidTable (usersContent) VALUES (?)");
+    //Execute query
     $stmt1->execute([$_POST['usersContent']]);
 }
 
+//Check if POST return something
 if (isset($_POST['submitContentUpdate'])) {
+    //Prepare query for content submission
     $stmt3 = $pdo->prepare("UPDATE $usersUidTable SET usersContent=? WHERE idContent=(?)");
+    //Execute query
     $stmt3->execute([$_POST['usersContentUpdate'], $_POST['idContentUpdate']]);
 }
 
+//Check if GET return something
 if (isset($_GET['delete'])) {
+    //Prepare query for content submission
     $stmt2 = $pdo->prepare("DELETE FROM $usersUidTable WHERE idContent=(?)");
+    //Execute query
     $stmt2->execute([$_GET['delete']]);
 }
 
