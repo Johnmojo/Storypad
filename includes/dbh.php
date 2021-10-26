@@ -9,8 +9,8 @@
 <?php
 //Credential for database
 $servername = 'localhost';
-$username = 'john';
-$password = 'john';
+$username = 'admin';
+$password = 'admin';
 $dbname = "quicknotedb";
 $charset = 'utf8mb4';
 
