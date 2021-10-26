@@ -2,13 +2,15 @@
 
 ### A tiny platform to write & manage your epic stories.
 
+This project demonstrates how a user can sign up for an account, then log into the system with the user's database - write stories, notes, and update and delete when necessary.
+
 ![](https://johnnychai.com/static/befdaec9a73d7d6544863354a5b29031/92f8c/storypad-3.webp)
 
-This project demonstrates how a user can sign up for an account, then log into the system with the user's database - write stories, notes, and update and delete when necessary.
+### Instruction
 
 1. Install XAMPP or WAMPP
 
-2. Open XAMPP Control panal and start [apache] and [mysql]
+2. Open XAMPP Control panal and start apache and mysql
 
 3. Navigate to xampp htdocs
 
